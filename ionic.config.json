@@ -1,0 +1,7 @@
+{
+  "name": "audio-recording",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
