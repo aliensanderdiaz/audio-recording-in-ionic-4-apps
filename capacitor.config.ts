@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'audio-recording',
+  appId: 'io.github.aliensanderdiaz.grabarAudio',
+  appName: 'Audio Recording',
   webDir: 'www',
   bundledWebRuntime: false
 };

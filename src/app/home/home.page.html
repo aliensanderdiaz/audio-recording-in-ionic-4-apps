@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ionic 4 Audio Recording
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-label>
+      <h2>{{ status }}</h2>
+    </ion-label>
+    <ion-button expand="block" size="large" (click)="RecordAudio()">Empezar Grabación</ion-button>
+    <ion-button expand="block" size="large" (click)="PauseRecording()">Pausar Grabación</ion-button>
+    <ion-button expand="block" size="large" (click)="ReanudingRecord()">Reanudar Grabación</ion-button>
+    <ion-button expand="block" size="large" (click)="StopRecording()" color="danger">Terminar Grabación</ion-button>
+    <ion-button expand="block" size="large" (click)="play()">Reproducir Grabación</ion-button>
+    <ion-button expand="block" size="large" (click)="enviar()">Enviar a Amazon</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <audio preload="none" controls="true" *ngIf="audio">
+      <!-- <source src="horse.ogg" type="audio/ogg"> -->
+      <source [src]="audio" type="audio/mpeg" >
+    Your browser does not support the audio element.
+    </audio>
+
 </ion-content>
